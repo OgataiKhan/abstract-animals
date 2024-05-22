@@ -17,5 +17,19 @@ public class AnimalGame {
             animal.printDiet();
             System.out.println("************");
         }
+
+        // Step 2: Interfaces
+
+        MakeMove makeMove = new MakeMove();
+
+        for (Animal animal : zoo) {
+            System.out.println("I am " + animal.name);
+            if(animal instanceof CanFly){
+                makeMove.makeFly((CanFly) animal);
+            } else if (animal instanceof CanSwim) {
+                makeMove.makeSwim((CanSwim) animal);
+            }
+            System.out.println("************");
+        }
     }
 }

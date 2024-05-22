@@ -1,6 +1,6 @@
 package org.zoo;
 
-public class Dog extends Animal{
+public class Dog extends Animal implements CanSwim{
 
     // ATTRIBUTES
 
@@ -21,5 +21,10 @@ public class Dog extends Animal{
     @Override
     public void printDiet() {
         System.out.println("I am an omnivore");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("I am swimming!");
     }
 }
